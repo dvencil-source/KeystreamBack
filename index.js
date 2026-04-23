@@ -3,7 +3,7 @@ const cors = require('cors');
 const ytdl = require('@distube/ytdl-core');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 
 // ─── MIDDLEWARE ───────────────────────────────────────────────
 app.use(cors());
@@ -135,8 +135,6 @@ app.get('/api/yt/audio', rateLimit, async (req, res) => {
 });
 
 // ─── SERVER STARTUP ───────────────────────────────────────────
-const PORT = process.env.PORT || 8080;
-
 const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`KeyStream server running on port ${PORT}`);
 });

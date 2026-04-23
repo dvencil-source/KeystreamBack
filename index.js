@@ -135,7 +135,7 @@ app.get('/api/yt/audio', rateLimit, async (req, res) => {
 });
 
 // ─── SERVER STARTUP ───────────────────────────────────────────
-const server = app.listen(PORT, () => {
+const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`KeyStream server running on port ${PORT}`);
 });
 
